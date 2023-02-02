@@ -20,7 +20,10 @@ class Employee(models.Model):
         on_delete=models.SET_NULL,
         null=True,
         blank=True,
+    
+
     )
 
+    avatar = models.ImageField(upload_to='meadia')
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
